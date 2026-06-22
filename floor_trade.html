@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Floor | Crossentrade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#1E3A8A', accent: '#F58220' } } } }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <!-- Navbar: Sticky, Shadow-lg for 3D effect -->
+    <nav class="sticky top-0 z-50 bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center shadow-lg">
+        <a href="https://luginapasini95.github.io/crossentrade/flow_trade.html" class="flex items-center space-x-3">
+            <span class="font-bold text-xl">
+                <span class="text-primary">Crossen</span><span class="text-accent">trade</span>
+            </span>
+            <img src="logo.png" alt="Logo" class="h-8 drop-shadow-lg" onerror="this.src='https://placehold.co/40x40/1E3A8A/FFFFFF?text=C'">
+        </a>
+        <div class="flex items-center space-x-4">
+            <button class="text-slate-400"><i class="fas fa-moon"></i></button>
+            <button class="bg-primary text-white px-6 py-2 rounded-lg font-bold text-sm">Login</button>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-8">
+        
+        <!-- Hero Section: Compacted Height -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Left Slider -->
+            <div class="lg:col-span-2 relative w-full overflow-hidden rounded-2xl shadow-sm border border-slate-200 h-[180px] sm:h-[220px] md:h-[250px] group">
+                <div id="slider1" class="flex transition-transform duration-700 ease-in-out h-full">
+                    <div class="min-w-full h-full bg-primary flex items-center text-white relative"><img src="https://placehold.co/800x400/1E3A8A/FFFFFF?text=Promo+1" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay"><div class="relative z-10 px-8 md:px-12"><h2 class="text-xl md:text-3xl font-extrabold mb-4">Diskon Ongkir <br>Hingga 50%</h2></div></div>
+                    <div class="min-w-full h-full bg-blue-800 flex items-center text-white relative"><img src="https://placehold.co/800x400/1E40AF/FFFFFF?text=Promo+2" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay"><div class="relative z-10 px-8 md:px-12"><h2 class="text-xl md:text-3xl font-extrabold mb-4">Katalog Produk <br>Terbaru 2026</h2></div></div>
+                    <div class="min-w-full h-full bg-indigo-900 flex items-center text-white relative"><img src="https://placehold.co/800x400/312E81/FFFFFF?text=Promo+3" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay"><div class="relative z-10 px-8 md:px-12"><h2 class="text-xl md:text-3xl font-extrabold mb-4">Gabung Jadi <br>Supplier Sekarang</h2></div></div>
+                    <div class="min-w-full h-full bg-slate-800 flex items-center text-white relative"><img src="https://placehold.co/800x400/1E293B/FFFFFF?text=Promo+4" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay"><div class="relative z-10 px-8 md:px-12"><h2 class="text-xl md:text-3xl font-extrabold mb-4">Solusi Ekspor <br>Tanpa Ribet</h2></div></div>
+                    <div class="min-w-full h-full bg-blue-900 flex items-center text-white relative"><img src="https://placehold.co/800x400/172554/FFFFFF?text=Promo+5" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay"><div class="relative z-10 px-8 md:px-12"><h2 class="text-xl md:text-3xl font-extrabold mb-4">Harga Grosir <br>Termurah</h2></div></div>
+                </div>
+                <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-2 rounded-full text-white backdrop-blur-sm" onclick="moveSlide('slider1', -1)">❮</button>
+                <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/60 p-2 rounded-full text-white backdrop-blur-sm" onclick="moveSlide('slider1', 1)">❯</button>
+                <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 dots" data-slider="slider1"></div>
+            </div>
+            
+            <!-- Right Sliders: Compacted Height -->
+            <div class="hidden lg:flex flex-col gap-6 h-[250px]">
+                <div id="wrapper2" class="flex-1 relative w-full overflow-hidden rounded-2xl shadow-sm border border-blue-200">
+                    <div id="slider2" class="flex transition-transform duration-700 ease-in-out h-full">
+                        <div class="min-w-full h-full bg-blue-50 flex items-center justify-center p-6"><h3 class="font-bold text-blue-900 text-sm">Modal Ekspor #1</h3></div>
+                        <div class="min-w-full h-full bg-blue-100 flex items-center justify-center p-6"><h3 class="font-bold text-blue-900 text-sm">Modal Ekspor #2</h3></div>
+                        <div class="min-w-full h-full bg-blue-50 flex items-center justify-center p-6"><h3 class="font-bold text-blue-900 text-sm">Modal Ekspor #3</h3></div>
+                        <div class="min-w-full h-full bg-blue-100 flex items-center justify-center p-6"><h3 class="font-bold text-blue-900 text-sm">Modal Ekspor #4</h3></div>
+                        <div class="min-w-full h-full bg-blue-50 flex items-center justify-center p-6"><h3 class="font-bold text-blue-900 text-sm">Modal Ekspor #5</h3></div>
+                    </div>
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 p-1 rounded-full text-blue-900" onclick="moveSlide('slider2', -1)">❮</button>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 p-1 rounded-full text-blue-900" onclick="moveSlide('slider2', 1)">❯</button>
+                    <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 dots" data-slider="slider2"></div>
+                </div>
+                <div id="wrapper3" class="flex-1 relative w-full overflow-hidden rounded-2xl shadow-sm border border-orange-200">
+                    <div id="slider3" class="flex transition-transform duration-700 ease-in-out h-full">
+                        <div class="min-w-full h-full bg-orange-50 flex items-center justify-center p-6"><h3 class="font-bold text-orange-900 text-sm">Supplier 2026 #1</h3></div>
+                        <div class="min-w-full h-full bg-orange-100 flex items-center justify-center p-6"><h3 class="font-bold text-orange-900 text-sm">Supplier 2026 #2</h3></div>
+                        <div class="min-w-full h-full bg-orange-50 flex items-center justify-center p-6"><h3 class="font-bold text-orange-900 text-sm">Supplier 2026 #3</h3></div>
+                        <div class="min-w-full h-full bg-orange-100 flex items-center justify-center p-6"><h3 class="font-bold text-orange-900 text-sm">Supplier 2026 #4</h3></div>
+                        <div class="min-w-full h-full bg-orange-50 flex items-center justify-center p-6"><h3 class="font-bold text-orange-900 text-sm">Supplier 2026 #5</h3></div>
+                    </div>
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 p-1 rounded-full text-orange-900" onclick="moveSlide('slider3', -1)">❮</button>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 p-1 rounded-full text-orange-900" onclick="moveSlide('slider3', 1)">❯</button>
+                    <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1 dots" data-slider="slider3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h1 class="text-2xl font-bold text-slate-800">Trade Floor</h1>
+            <p class="text-slate-500 text-sm font-medium uppercase tracking-wide">MARKETPLACE B2B</p>
+            <div class="flex justify-between items-center mt-2 text-sm text-slate-500">
+                <p>Produk verified dari produsen terdaftar</p>
+                <p>22 JUN 2026</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-wrap gap-4 items-center mb-8">
+            <div class="flex-grow relative">
+                <i class="fas fa-search absolute left-3 top-3 text-slate-400"></i>
+                <input type="text" placeholder="Cari produk, kategori, atau PT..." class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            <select class="border border-slate-200 rounded-lg px-4 py-2 text-sm text-slate-600 focus:outline-none">
+                <option>Semua Kategori</option>
+            </select>
+            <select class="border border-slate-200 rounded-lg px-4 py-2 text-sm text-slate-600 focus:outline-none">
+                <option>Terbaru</option>
+            </select>
+            <label class="flex items-center space-x-2 text-sm font-medium text-slate-600 border border-slate-200 px-4 py-2 rounded-lg cursor-pointer hover:bg-slate-50">
+                <input type="checkbox" class="accent-primary">
+                <span>Hanya Ready</span>
+            </label>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                <div class="relative mb-3"><span class="absolute top-2 left-2 bg-orange-100 text-orange-600 text-[9px] font-bold px-2 py-1 rounded">BELUM SIAP</span><button class="absolute top-2 right-2 text-slate-400 hover:text-red-500"><i class="far fa-heart"></i></button><img src="https://placehold.co/300x200/F1F5F9/1E3A8A?text=Produk" class="w-full h-40 object-cover rounded-lg"></div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase">GOEZ BAGS</p><h3 class="font-bold text-sm text-slate-800 mb-2">Handbag CLAY GOEZ BAGS tahan bara...</h3><span class="bg-blue-50 text-primary text-[10px] px-2 py-1 rounded font-bold mb-3 inline-block">BAGS & BACKPACKS</span><p class="text-[10px] text-slate-500 mb-3">MOQ 1K · Capacity 5K/hari</p><p class="text-[9px] text-slate-400 uppercase font-medium">HARGA MULAI</p><p class="font-bold text-primary mb-4 text-sm">IDR 69,540</p>
+                <div class="flex gap-2"><button class="flex-grow bg-primary text-white py-2 rounded-lg text-xs font-bold hover:bg-blue-900 transition">Lihat Detail</button><button class="border border-slate-200 px-3 rounded-lg text-slate-400 hover:bg-slate-100 transition"><i class="fas fa-shopping-cart text-xs"></i></button></div>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                <div class="relative mb-3"><span class="absolute top-2 left-2 bg-orange-100 text-orange-600 text-[9px] font-bold px-2 py-1 rounded">BELUM SIAP</span><button class="absolute top-2 right-2 text-slate-400 hover:text-red-500"><i class="far fa-heart"></i></button><img src="https://placehold.co/300x200/F1F5F9/1E3A8A?text=Produk" class="w-full h-40 object-cover rounded-lg"></div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase">KITEBAR HAGE</p><h3 class="font-bold text-sm text-slate-800 mb-2">Keripik Tempe H&G</h3><span class="bg-blue-50 text-primary text-[10px] px-2 py-1 rounded font-bold mb-3 inline-block">CANNED & PACKAGED FOOD</span><p class="text-[10px] text-slate-500 mb-3">MOQ 2.5K · Capacity 5K/hari</p><p class="text-[9px] text-slate-400 uppercase font-medium">HARGA MULAI</p><p class="font-bold text-primary mb-4 text-sm">IDR 23,800</p>
+                <div class="flex gap-2"><button class="flex-grow bg-primary text-white py-2 rounded-lg text-xs font-bold hover:bg-blue-900 transition">Lihat Detail</button><button class="border border-slate-200 px-3 rounded-lg text-slate-400 hover:bg-slate-100 transition"><i class="fas fa-shopping-cart text-xs"></i></button></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-300 mt-16 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-1 lg:col-span-1"><img src="logo3.png" alt="Logo" class="h-16 mb-6" onerror="this.src='https://placehold.co/150x60/1E3A8A/FFFFFF?text=Logo'"><p class="text-sm text-slate-400">Gateway B2B terpercaya untuk pertumbuhan bisnis Anda.</p></div>
+                <div class="space-y-4">
+                    <a href="https://luginapasini95.github.io/crossentrade/index.html" class="block hover:text-accent transition text-sm">About Us</a>
+                    <a href="https://luginapasini95.github.io/crossentrade/term.html" class="block hover:text-accent transition text-sm">Term and Condition</a>
+                    <a href="https://luginapasini95.github.io/crossentrade/faq.html" class="block hover:text-accent transition text-sm">FAQ</a>
+                    <a href="https://luginapasini95.github.io/crossentrade/tng.html" class="block hover:text-accent transition text-sm">Tutorial & Guideline</a>
+                    <a href="https://luginapasini95.github.io/crossentrade/update.html" class="block hover:text-accent transition text-sm">Information & Updates</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">&copy; 2026 Crossentrade. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        const sliderStates = { slider1: { current: 0, total: 5 }, slider2: { current: 0, total: 5 }, slider3: { current: 0, total: 5 } };
+        function updateSlider(id) {
+            const slider = document.getElementById(id);
+            const state = sliderStates[id];
+            slider.style.transform = `translateX(-${(state.current * 100) / state.total}%)`;
+            const dots = document.querySelector(`.dots[data-slider="${id}"]`);
+            if (dots) {
+                dots.querySelectorAll('button').forEach((dot, index) => { dot.className = `w-2 h-2 rounded-full transition-colors ${index === state.current ? 'bg-white' : 'bg-white/50'}`; });
+            }
+        }
+        function moveSlide(id, direction) {
+            const state = sliderStates[id];
+            state.current = (state.current + direction + state.total) % state.total;
+            updateSlider(id);
+        }
+        function setupSlider(id) {
+            const dotsContainer = document.querySelector(`.dots[data-slider="${id}"]`);
+            if (dotsContainer) {
+                for (let i = 0; i < sliderStates[id].total; i++) {
+                    const btn = document.createElement('button');
+                    btn.className = `w-2 h-2 rounded-full transition-colors ${i === 0 ? 'bg-white' : 'bg-white/50'}`;
+                    btn.onclick = () => { sliderStates[id].current = i; updateSlider(id); };
+                    dotsContainer.appendChild(btn);
+                }
+            }
+            setInterval(() => { moveSlide(id, 1); }, 5000 + (Math.random() * 1000));
+        }
+        ['slider1', 'slider2', 'slider3'].forEach(setupSlider);
+    </script>
+</body>
+</html>
