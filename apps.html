@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Crossentrade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        accent: '#F58220'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-700 to-blue-950 flex flex-col items-center justify-center p-4 font-sans text-white">
+
+    <div class="absolute top-6 right-6">
+        <div class="bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 text-xs font-bold flex items-center space-x-2 border border-white/10">
+            <span class="bg-white text-blue-900 px-2 py-0.5 rounded-full">ID</span>
+            <span>EN</span>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center mb-12">
+        <img src="logo.png" alt="Crossentrade Logo" class="h-16 mb-6 drop-shadow-xl" onerror="this.src='https://placehold.co/100x100/1E3A8A/FFFFFF?text=X'">
+        <h1 class="text-3xl font-bold tracking-wider">
+            <span class="text-white">Crossen</span><span class="text-orange-500">trade</span>
+        </h1>
+        <p class="text-blue-200 mt-2 text-sm uppercase tracking-widest">B2B Trade Platform</p>
+    </div>
+
+    <div class="w-full max-w-lg space-y-4">
+        
+        <!-- Buyer -->
+        <a href="#" class="block bg-white/10 hover:bg-white/20 transition-all border border-white/10 rounded-2xl p-4 flex items-center group">
+            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl mr-4">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="flex-grow">
+                <h3 class="font-bold">Buyer</h3>
+                <p class="text-xs text-blue-200">Cari & beli produk dari produsen</p>
+            </div>
+            <i class="fas fa-chevron-right text-sm opacity-50 group-hover:opacity-100"></i>
+        </a>
+
+        <!-- Produsen -->
+        <a href="#" class="block bg-orange-500/20 hover:bg-orange-500/30 transition-all border border-orange-500/20 rounded-2xl p-4 flex items-center group">
+            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center text-xl mr-4 text-orange-400">
+                <i class="fas fa-industry"></i>
+            </div>
+            <div class="flex-grow">
+                <h3 class="font-bold">Produsen</h3>
+                <p class="text-xs text-blue-200">Kelola produk & pesanan Anda</p>
+            </div>
+            <i class="fas fa-chevron-right text-sm opacity-50 group-hover:opacity-100"></i>
+        </a>
+    </div>
+
+    <footer class="absolute bottom-6 text-blue-300/50 text-xs font-medium">
+        &copy; 2026 Crossentrade. All rights reserved.
+    </footer>
+
+</body>
+</html>
